@@ -1,0 +1,64 @@
+.sidebar {
+    background-color: $mainColor;
+    color: $fontColor;
+    padding: 2.7rem 2rem 3rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    
+    @media(min-width: $lg) {
+        width: 25.6rem;
+    }
+
+    &-logo {
+        @media(min-width: $lg) {
+            margin-bottom: 3.6rem;
+        }
+
+        & > img {
+            @media(min-width: $lg) {
+                width: 9.9rem;
+                height: 2.4rem;
+            }
+        }
+    }
+
+    &-block {
+        margin-bottom: 3.6rem;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.2rem;
+
+        @media(min-width: $lg) {
+            cursor: pointer;
+        }
+
+        &__wrap {
+            justify-content: space-between;
+        }
+
+        &__community {
+            display: flex;
+        }
+    }
+    
+    &-name {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-left: 1.2rem;
+        font-weight: 500;
+    }
+
+    &-group {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        font-weight: 600;
+        color: $secondaryColor;
+        margin-bottom: 1.2rem;
+    }
+}

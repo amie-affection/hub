@@ -1,0 +1,89 @@
+@import './vars';
+@import './vendor/reset.scss';
+@import './fonts.scss';
+@import './choices.scss';
+@import './blocks/sidebar.scss';
+@import './blocks/page.scss';
+@import './blocks/modal.scss';
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+
+  // @media(min-width: $sm) {
+  //   font-size: 2.667vw;
+  // }
+
+  @media(min-width: $lg) {
+    font-size: 0.694vw;
+  }
+}
+
+body {
+  font-family: $mainFont;
+  overflow-x: hidden;
+}
+
+.page__wrapper {
+  @media(min-width: $lg) {
+    display: flex;
+  }
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: none;
+}
+
+.custom-checkbox__input-fake {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.custom-checkbox__input:checked ~ .custom-checkbox__input-fake {
+  background-image: url(/assets/images/check.svg);
+  background-color: #5E5ADB;
+}
+
+// calendar
+
+.calendar-table {
+  width: 27rem;
+  height: 28.9rem;
+
+  & > table > thead > tr {
+    height: 4rem;
+    color: #FFFFFF;
+  }
+}
+
+.daterangepicker .calendar-table th {
+  background-color: #4F46E5;
+  border: none;
+  border-radius: 0 !important;
+}
+
+.daterangepicker .drp-calendar.left .calendar-table {
+  padding: 0 !important;
+}
