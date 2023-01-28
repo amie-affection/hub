@@ -15,6 +15,10 @@ const element = document.querySelectorAll('.select-default');
 
 // table
 
+$(document).ready(function () {
+  $('#example').DataTable();
+});
+
 const tableData = [
     {
       name: 'Grand Hotel du Palais Royal',
@@ -161,7 +165,7 @@ const tableData = [
   const sliderFn = ({ name, supplier, location, vibe, perks, from }) => {
     const template = `
       <tr>
-        <td>
+        <td class="main-page__table-check">
           <label class="custom-checkbox">
             <input type="checkbox" class="custom-checkbox__input">
             <span class="custom-checkbox__input-fake"></span>
@@ -237,13 +241,41 @@ const tableData = [
 }
 initPopup()
 
+// all checkboxes
+
+const allCheckboxes = document.querySelector('.all-checkboxes');
+checked = false;
+
+const checkedAll = () => {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  for(let checkbox of checkboxes) {
+    checkbox.checked = true;
+  }
+}
+
+allCheckboxes.addEventListener('click', checkedAll);
+
+
 // calendar
 
-$(function() {
-  $('input[name="birthday"]').daterangepicker({
-    singleDatePicker: true,
-    showDropdowns: true,
-    minYear: 1901,
-    maxYear: parseInt(moment().format('YYYY'),10)
-  });
-});
+// const calendar = document.querySelectorAll('.data-calendar');
+//     calendar.forEach(element => {
+//         new AirDatepicker(element, {
+//             year: 'numeric',
+//             day: '2-digit',
+//             month: 'long',
+//             showOtherMonths : false,
+//             locale: {
+//                 days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+//                 daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+//                 daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+//                 months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+//                 monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+//                 today: 'Today',
+//                 clear: 'Clear',
+//                 dateFormat: 'MM/dd/yyyy',
+//                 timeFormat: 'hh:mm aa',
+//                 firstDay: 0
+//             },
+//         })
+//     });
