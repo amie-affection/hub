@@ -277,5 +277,8 @@ $('#datepicker').daterangepicker({
   "startDate": "01/23/2023",
   "endDate": "01/29/2023",
   "opens": "center",
-  "drops": "auto"
+  "drops": "auto",
+  "locale": {
+    "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"]
+  } 
 });
