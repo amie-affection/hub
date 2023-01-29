@@ -1424,6 +1424,10 @@ table.dataTable thead > tr > th.sorting:before, table.dataTable thead > tr > th.
     border: none;
 }
 
+.drp-calendar {
+    font-family: "Inter";
+}
+
 .table-condensed thead {
     background-color: #4F46E5;
     color: #FFFFFF;
@@ -1436,8 +1440,53 @@ table.dataTable thead > tr > th.sorting:before, table.dataTable thead > tr > th.
 .daterangepicker .calendar-table th {
     font-size: 1.3rem !important;
     line-height: 1.7rem !important;
+    font-weight: bold;
 }
 
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
     border-radius: 0px;
+}
+
+.daterangepicker .drp-calendar.left,
+.daterangepicker .drp-calendar.left .calendar-table {
+    padding: 0;
+}
+
+.month {
+    font-weight: bold;
+}
+
+.daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+    width: 3.8rem;
+    height: 3.5rem;
+}
+
+.calendar-table .next span {
+    background-image: url(/assets/images/arrow-right.svg);
+}
+
+.calendar-table .prev span {
+    background-image: url(/assets/images/arrow-left.svg);
+}
+
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+    background-color: #4F46E5;
+    color: #FFFFFF;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #F4F4F4;
+    color: #000000;
+}
+
+.start-date .active {
+    background-color: #F4F4F4;
 }

@@ -193,11 +193,12 @@
                 background: rgba(247, 249, 252, 0.8);
                 backdrop-filter: blur(4px);
                 padding-right: 2rem;
+                border-top: 1px solid #E5E7EB;
+                border-bottom: 1px solid #E5E7EB;
             }
         } 
 
         & > tbody > tr {
-            height: 4.8rem;
             font-size: 1.4rem;
             line-height: 2rem;
             color: #171C26;
@@ -205,6 +206,12 @@
             & > td {
                 padding-right: 2rem;
                 vertical-align: middle;
+                border-bottom: 1px solid #E9EDF5;
+                padding: 1.3rem 0 1.3rem 0;
+
+                &:first-child {
+                    padding-left: 2rem;
+                }
             }
         }
 
@@ -253,7 +260,6 @@
             color: #14804A;
             background-color: #E1FCEF;
             padding: 0 0.8rem !important;
-            margin: 1.5rem 0;
             border-radius: 4px;
 
             &::before {

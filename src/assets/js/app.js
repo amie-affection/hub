@@ -184,7 +184,9 @@ const tableData = [
         <td>${supplier}</td>
         <td class="main-page__table__location">${location}</td>
         <td>${vibe}</td>
-        <td class="main-page__table__perks">${perks}</td>
+        <td>
+          <span class="main-page__table__perks">${perks}<span/>
+        </td>
         <td>US$ ${from}</td>
         <td>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
