@@ -196,3 +196,23 @@ table.dataTable thead>tr>th.sorting:before, table.dataTable thead>tr>th.sorting:
 .form-select {
   border: none;
 }
+
+// calendar
+
+.table-condensed thead {
+  background-color: #4F46E5;
+  color: $fourthColor;
+
+  & > tr > th {
+    height: 4rem !important;
+  }
+}
+
+.daterangepicker .calendar-table th {
+  font-size: 1.3rem !important;
+  line-height: 1.7rem !important;
+}
+
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+  border-radius: 0px;
+}

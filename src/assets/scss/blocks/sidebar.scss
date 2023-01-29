@@ -2,18 +2,27 @@
     height: 100vh;
     background-color: $mainColor;
     color: $fontColor;
-    padding: 2.7rem 0.8rem 3rem 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: auto;
     position: fixed;
-    left: 0;
     top: 0;
     z-index: 50;
+    width: 25.6rem;
+    left: -25.6rem;
+    transition: all .2s ease;
+
+    &.active {
+        left: 0;
+    }
     
     @media(min-width: $lg) {
-        width: 25.6rem;
+        left: 0;
+    }
+
+    &__wrapper {
+        overflow: auto;
+        padding: 2.7rem 0.8rem 3rem 1.6rem;
     }
 
     &-logo {
@@ -100,4 +109,30 @@
         color: $secondaryColor;
         margin-bottom: 1.2rem;
     }
+
+    &__open {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 16.5rem;
+        right: -4.7rem;
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        border-radius: 0 50% 50% 0;
+        z-index: 100;
+
+        @media(min-width: $lg) {
+            display: none;
+        }
+
+        & > svg {
+            width: 25px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.sidebar.active .sidebar__open svg {
+    transform: rotate(0);
 }

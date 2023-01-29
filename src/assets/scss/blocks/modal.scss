@@ -45,8 +45,7 @@
     height: 100%;
 
     @media(min-width: $lg) {
-      width: 46.2rem;
-      height: 72rem;
+      max-width: 462px;
     }
   }
 
@@ -87,7 +86,7 @@
     display: block;
     color: #171C26;
     margin-bottom: 0.8rem;
- }
+ } 
 
  .modal__body-calendar {
     display: flex;
@@ -100,7 +99,7 @@
 
  .modal__body-input {
     width: 100%;
-    height: 3.2rem;
+    height: 32px;
     border: 1px solid #D1D5DB;
     border-radius: 0 4px 4px 0;
     border-left: none;
@@ -135,7 +134,7 @@
 
  .modal__body-textarea {
     width: 100%;
-    height: 9.8rem;
+    height: 98px;
     border: 1px solid #D1D5DB;
     border-radius: 4px;
     margin-bottom: 1.6rem;
@@ -143,6 +142,7 @@
     font-size: 1.3rem;
     line-height: 1.6rem;
     color: #6B7280;
+    resize: none;
  }
   
   .modal__footer {
@@ -179,8 +179,8 @@
 
   .btn-close {
     cursor: pointer;
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 24px;
+    height: 24px;
 
     & > svg {
       width: 100%;
@@ -189,7 +189,7 @@
   }
 
   .select__modal {
-    height: 3.2rem;
+    height: 32px;
     border: 1px solid #D1D5DB;
     border-radius: 4px;
   }

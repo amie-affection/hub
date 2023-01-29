@@ -5,11 +5,20 @@ $('[data-tab-nav] li').on('click', function(ev) {
   $([$(this)[0], $($(this).data('href'))[0]]).addClass('active-tab').siblings('.active-tab').removeClass('active-tab');
 });
 
+// show sidebar on mobile
+
+$('.sidebar__open').click(function(e) {
+  e.preventDefault();
+  $('.sidebar').toggleClass('active');
+})
+
 // select
 
 const element = document.querySelectorAll('.select-default');
     element.forEach(item => {
         const example = new Choices(item, {
+          placeholder: false,
+          placeholderValue: null,
         }); 
     })
 
@@ -244,12 +253,15 @@ initPopup()
 // all checkboxes
 
 const allCheckboxes = document.querySelector('.all-checkboxes');
-checked = false;
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 const checkedAll = () => {
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   for(let checkbox of checkboxes) {
-    checkbox.checked = true;
+    if(checkbox.checked === true) {
+      checkbox.checked = false;
+    } else {
+      checkbox.checked = true;
+    }
   }
 }
 
@@ -258,24 +270,12 @@ allCheckboxes.addEventListener('click', checkedAll);
 
 // calendar
 
-// const calendar = document.querySelectorAll('.data-calendar');
-//     calendar.forEach(element => {
-//         new AirDatepicker(element, {
-//             year: 'numeric',
-//             day: '2-digit',
-//             month: 'long',
-//             showOtherMonths : false,
-//             locale: {
-//                 days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-//                 daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-//                 daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-//                 months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-//                 monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-//                 today: 'Today',
-//                 clear: 'Clear',
-//                 dateFormat: 'MM/dd/yyyy',
-//                 timeFormat: 'hh:mm aa',
-//                 firstDay: 0
-//             },
-//         })
-//     });
+$('#datepicker').daterangepicker({
+  "singleDatePicker": true,
+  "autoApply": true,
+  "showCustomRangeLabel": false,
+  "startDate": "01/23/2023",
+  "endDate": "01/29/2023",
+  "opens": "center",
+  "drops": "auto"
+});
