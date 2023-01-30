@@ -1292,7 +1292,7 @@ body {
 }
 
 .custom-checkbox__input:checked ~ .custom-checkbox__input-fake {
-    background-image: url(/assets/images/check.svg);
+    background-image: url(./../assets/images/check.svg);
     background-repeat: no-repeat;
     background-color: #5E5ADB;
 }
@@ -1307,7 +1307,7 @@ body {
 }
 
 .choices[data-type*=select-one]::after {
-    background-image: url(/assets/images/chevron_down.svg);
+    background-image: url(./../assets/images/chevron_down.svg);
     background-repeat: no-repeat;
     height: 20px;
     width: 20px;
@@ -1469,11 +1469,11 @@ table.dataTable thead > tr > th.sorting:before, table.dataTable thead > tr > th.
 }
 
 .calendar-table .next span {
-    background-image: url(/assets/images/arrow-right.svg);
+    background-image: url(./../assets/images/arrow-right.svg);
 }
 
 .calendar-table .prev span {
-    background-image: url(/assets/images/arrow-left.svg);
+    background-image: url(./../assets/images/arrow-left.svg);
 }
 
 .daterangepicker td.available:hover, .daterangepicker th.available:hover {
